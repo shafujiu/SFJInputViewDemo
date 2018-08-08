@@ -13,8 +13,6 @@
 		95DE9A0B2119A08A00790787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95DE9A0A2119A08A00790787 /* Assets.xcassets */; };
 		95DE9A0E2119A08A00790787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95DE9A0C2119A08A00790787 /* LaunchScreen.storyboard */; };
 		95DE9A112119A08A00790787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A102119A08A00790787 /* main.m */; };
-		95DE9A1B2119A08B00790787 /* SFJInputViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A1A2119A08B00790787 /* SFJInputViewDemoTests.m */; };
-		95DE9A262119A08B00790787 /* SFJInputViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A252119A08B00790787 /* SFJInputViewDemoUITests.m */; };
 		95DE9A362119A37B00790787 /* SFJInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A342119A37A00790787 /* SFJInputView.m */; };
 		95DE9A39211A818B00790787 /* SFJNextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A38211A818B00790787 /* SFJNextController.m */; };
 /* End PBXBuildFile section */
@@ -48,11 +46,7 @@
 		95DE9A0F2119A08A00790787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95DE9A102119A08A00790787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		95DE9A162119A08B00790787 /* SFJInputViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFJInputViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DE9A1A2119A08B00790787 /* SFJInputViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFJInputViewDemoTests.m; sourceTree = "<group>"; };
-		95DE9A1C2119A08B00790787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95DE9A212119A08B00790787 /* SFJInputViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFJInputViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DE9A252119A08B00790787 /* SFJInputViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFJInputViewDemoUITests.m; sourceTree = "<group>"; };
-		95DE9A272119A08B00790787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95DE9A342119A37A00790787 /* SFJInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFJInputView.m; sourceTree = "<group>"; };
 		95DE9A352119A37B00790787 /* SFJInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFJInputView.h; sourceTree = "<group>"; };
 		95DE9A37211A818B00790787 /* SFJNextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFJNextController.h; sourceTree = "<group>"; };
@@ -88,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				95DE9A002119A08900790787 /* SFJInputViewDemo */,
-				95DE9A192119A08B00790787 /* SFJInputViewDemoTests */,
-				95DE9A242119A08B00790787 /* SFJInputViewDemoUITests */,
 				95DE99FF2119A08900790787 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,24 +113,6 @@
 				95DE9A102119A08A00790787 /* main.m */,
 			);
 			path = SFJInputViewDemo;
-			sourceTree = "<group>";
-		};
-		95DE9A192119A08B00790787 /* SFJInputViewDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				95DE9A1A2119A08B00790787 /* SFJInputViewDemoTests.m */,
-				95DE9A1C2119A08B00790787 /* Info.plist */,
-			);
-			path = SFJInputViewDemoTests;
-			sourceTree = "<group>";
-		};
-		95DE9A242119A08B00790787 /* SFJInputViewDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				95DE9A252119A08B00790787 /* SFJInputViewDemoUITests.m */,
-				95DE9A272119A08B00790787 /* Info.plist */,
-			);
-			path = SFJInputViewDemoUITests;
 			sourceTree = "<group>";
 		};
 		95DE9A332119A0F800790787 /* SFJInputView */ = {
@@ -292,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DE9A1B2119A08B00790787 /* SFJInputViewDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DE9A262119A08B00790787 /* SFJInputViewDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

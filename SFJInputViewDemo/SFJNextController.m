@@ -27,9 +27,17 @@
     inputView.placeholder = @"占位文字";
     inputView.placeholderColor = [UIColor orangeColor];
     inputView.backgroundColor = [UIColor grayColor];
+    inputView.maxNumberOfLines = 4;
+    __weak SFJInputView *weakInput = inputView;
+    [inputView setTextHeightChangeBlock:^(NSString *text, CGFloat textHeight) {
+        // 更新高度
+        CGRect rect = weakInput.frame;
+        rect.size.height = textHeight;
+        weakInput.frame = rect;
+    }];
+    
     [self.view addSubview:inputView];
     inputView_ = inputView;
-    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
