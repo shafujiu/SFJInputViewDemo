@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxe-pX-3OO" customClass="SFJInputView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxe-pX-3OO" customClass="SFJInputTextView">
                                 <rect key="frame" x="20" y="602" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.94459766150000002" green="0.90389573570000004" blue="0.72542566060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>

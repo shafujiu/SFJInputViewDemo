@@ -13,8 +13,8 @@
 		95DE9A0B2119A08A00790787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95DE9A0A2119A08A00790787 /* Assets.xcassets */; };
 		95DE9A0E2119A08A00790787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95DE9A0C2119A08A00790787 /* LaunchScreen.storyboard */; };
 		95DE9A112119A08A00790787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A102119A08A00790787 /* main.m */; };
-		95DE9A362119A37B00790787 /* SFJInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A342119A37A00790787 /* SFJInputView.m */; };
 		95DE9A39211A818B00790787 /* SFJNextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A38211A818B00790787 /* SFJNextController.m */; };
+		95DE9A3B211A92D700790787 /* SFJInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A3A211A92D700790787 /* SFJInputTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 		95DE9A102119A08A00790787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		95DE9A162119A08B00790787 /* SFJInputViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFJInputViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95DE9A212119A08B00790787 /* SFJInputViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFJInputViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95DE9A342119A37A00790787 /* SFJInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFJInputView.m; sourceTree = "<group>"; };
-		95DE9A352119A37B00790787 /* SFJInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFJInputView.h; sourceTree = "<group>"; };
+		95DE9A352119A37B00790787 /* SFJInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFJInputTextView.h; sourceTree = "<group>"; };
 		95DE9A37211A818B00790787 /* SFJNextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFJNextController.h; sourceTree = "<group>"; };
 		95DE9A38211A818B00790787 /* SFJNextController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFJNextController.m; sourceTree = "<group>"; };
+		95DE9A3A211A92D700790787 /* SFJInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFJInputTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 		95DE9A332119A0F800790787 /* SFJInputView */ = {
 			isa = PBXGroup;
 			children = (
-				95DE9A352119A37B00790787 /* SFJInputView.h */,
-				95DE9A342119A37A00790787 /* SFJInputView.m */,
+				95DE9A352119A37B00790787 /* SFJInputTextView.h */,
+				95DE9A3A211A92D700790787 /* SFJInputTextView.m */,
 			);
 			path = SFJInputView;
 			sourceTree = "<group>";
@@ -254,10 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DE9A3B211A92D700790787 /* SFJInputTextView.m in Sources */,
 				95DE9A062119A08900790787 /* ViewController.m in Sources */,
 				95DE9A112119A08A00790787 /* main.m in Sources */,
 				95DE9A032119A08900790787 /* AppDelegate.m in Sources */,
-				95DE9A362119A37B00790787 /* SFJInputView.m in Sources */,
 				95DE9A39211A818B00790787 /* SFJNextController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

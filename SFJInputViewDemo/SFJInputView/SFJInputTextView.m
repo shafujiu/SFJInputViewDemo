@@ -6,11 +6,11 @@
 //  Copyright © 2018年 newrank.cn. All rights reserved.
 //
 
-#import "SFJInputView.h"
+#import "SFJInputTextView.h"
 
 static NSInteger const kDefaultMaxNumOfLines = 3;
 
-@interface SFJInputView ()
+@interface SFJInputTextView ()
 
 /**
  *  占位文字View: 为什么使用UITextView，这样直接让占位文字View = 当前textView,文字就会重叠显示
@@ -29,7 +29,7 @@ static NSInteger const kDefaultMaxNumOfLines = 3;
 
 @end
 
-@implementation SFJInputView
+@implementation SFJInputTextView
 
 - (UITextView *)placeholderView
 {

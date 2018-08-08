@@ -7,7 +7,7 @@
 //
 
 #import "SFJNextController.h"
-#import "SFJInputView.h"
+#import "SFJInputTextView.h"
 
 @interface SFJNextController ()
 
@@ -15,7 +15,7 @@
 
 @implementation SFJNextController
 {
-    SFJInputView *inputView_;
+    SFJInputTextView *inputView_;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,12 +23,12 @@
     
     CGFloat inputY = self.view.frame.size.height - 50 - 15;
     CGFloat inputW = self.view.frame.size.width - 15 * 2;
-    SFJInputView *inputView = [[SFJInputView alloc] initWithFrame:CGRectMake(15, inputY, inputW, 50)];
+    SFJInputTextView *inputView = [[SFJInputTextView alloc] initWithFrame:CGRectMake(15, inputY, inputW, 50)];
     inputView.placeholder = @"占位文字";
     inputView.placeholderColor = [UIColor orangeColor];
     inputView.backgroundColor = [UIColor grayColor];
     inputView.maxNumberOfLines = 4;
-    __weak SFJInputView *weakInput = inputView;
+    __weak SFJInputTextView *weakInput = inputView;
     [inputView setTextHeightChangeBlock:^(NSString *text, CGFloat textHeight) {
         // 更新高度
         CGRect rect = weakInput.frame;

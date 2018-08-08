@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "SFJInputView.h"
+#import "SFJInputTextView.h"
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet SFJInputView *inputView;
+@property (weak, nonatomic) IBOutlet SFJInputTextView *inputView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputViewHeightC;
 
 @end

@@ -9,7 +9,7 @@
 
 typedef void(^SFJInputViewTextHeightChangeBlock)(NSString *text,CGFloat textHeight);
 
-@interface SFJInputView : UITextView
+@interface SFJInputTextView : UITextView
 
 /**
  *  textView最大行数
@@ -22,12 +22,10 @@ typedef void(^SFJInputViewTextHeightChangeBlock)(NSString *text,CGFloat textHeig
  *  block参数(textHeight) → 文字高度
  */
 @property (nonatomic, copy) SFJInputViewTextHeightChangeBlock textHeightChangeBlock;
-
 /**
  *  设置圆角
  */
 @property (nonatomic, assign) NSUInteger cornerRadius;
-
 /**
  *  占位文字
  */
