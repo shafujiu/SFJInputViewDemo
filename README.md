@@ -2,11 +2,11 @@
 自适应高度的TextView
 
 ## 简介
-SFJInputView 继承制UITextView，可以自适应文字高度变化，通过文字输入的行数来控制整个控件的高度，控制是通过提供的一个文字高度改变的block。
+SFJInputTextView 继承制UITextView，可以自适应文字高度变化，通过文字输入的行数来控制整个控件的高度，控制是通过提供的一个文字高度改变的block。
 并且可以改变frame，或者改变约束的方式来实现高度的改变。当然也是需要我们在控制器里面去配合设置的。
 
 ## 使用方法
-- 导入：将SFJInputView.h 与 .m 文件添加到工程中
+- 导入：将SFJInputTextView.h 与 .m 文件添加到工程中
 - 创建：
     - 使用xib，或者 sb 创建
     - 使用纯代码 initWithFrame: 创建
@@ -49,7 +49,7 @@ SFJInputView 继承制UITextView，可以自适应文字高度变化，通过文
     }];
  
  // 改变frame
- __weak SFJInputView *weakInput = inputView;
+ __weak SFJInputTextView *weakInput = inputView;
     [inputView setTextHeightChangeBlock:^(NSString *text, CGFloat textHeight) {
         // 更新高度
         CGRect rect = weakInput.frame;
