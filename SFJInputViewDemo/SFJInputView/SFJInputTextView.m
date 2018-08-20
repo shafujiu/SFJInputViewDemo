@@ -11,7 +11,9 @@
 static NSInteger const kDefaultMaxNumOfLines = 3;
 
 @interface SFJInputTextView ()
-
+{
+    CGFloat beginH_;
+}
 /**
  *  占位文字View: 为什么使用UITextView，这样直接让占位文字View = 当前textView,文字就会重叠显示
  */
@@ -82,6 +84,8 @@ static NSInteger const kDefaultMaxNumOfLines = 3;
     
     self.returnKeyType = UIReturnKeySend;
     
+    beginH_ = self.frame.size.height;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
 }
 
@@ -116,31 +120,33 @@ static NSInteger const kDefaultMaxNumOfLines = 3;
     _placeholder = placeholder;
     
     self.placeholderView.text = placeholder;
-    self.placeholderView.frame = self.bounds;
 }
-    
+
 - (void)setPlaceholderAttr:(NSAttributedString *)placeholderAttr{
     _placeholderAttr = placeholderAttr;
     self.placeholderView.attributedText = placeholderAttr;
-    self.placeholderView.frame = self.bounds;
 }
 
-- (void)textDidChange
-{
-//    self.placeholderView.frame = self.bounds;
+- (void)resetPlaceHolderView{
+    [self textDidChange];
+}
+
+- (void)textDidChange {
     // 占位文字是否显示
     self.placeholderView.hidden = self.text.length > 0;
     
     CGFloat limitW = self.bounds.size.width;
     NSInteger height = ceilf([self sizeThatFits:CGSizeMake(limitW, MAXFLOAT)].height);
-    CGFloat beginH = self.frame.size.height;
+    
+    CGFloat beginH = beginH_;
     // height > beginH 保证初始高度
     if ((_textH != height) && height > beginH) { // 高度不一样，就改变了高度
-        
         // 最大高度，可以滚动
         self.scrollEnabled = height > _maxTextH && _maxTextH > 0;
         _textH = height;
-        if (self.textHeightChangeBlock && self.scrollEnabled == NO) {
+        
+        if (self.textHeightChangeBlock && (self.scrollEnabled == NO || self.frame.size.height < _maxTextH)) {
+            height = height > _maxTextH ? _maxTextH : height;
             self.textHeightChangeBlock(self.text,height);
             [self.superview layoutIfNeeded];
             self.placeholderView.frame = self.bounds;

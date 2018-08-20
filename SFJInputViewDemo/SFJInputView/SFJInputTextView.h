@@ -38,6 +38,9 @@ typedef void(^SFJInputViewTextHeightChangeBlock)(NSString *text,CGFloat textHeig
  *  占位文字颜色
  */
 @property (nonatomic, strong) UIColor *placeholderColor;
-
+/**
+ 置空 text时候需要作此操作 否则可能会出现 占位文字不出现的情况
+ */
+- (void)resetPlaceHolderView;
 
 @end
